@@ -17,6 +17,8 @@ public class Exam01 {
     public String getScore() {
         if (ScoreA==1){
             return "Fifteen-Love";
+        }else if(ScoreA==2){
+            return "Thirty-Love";
         }
         return "Love-All";
 
