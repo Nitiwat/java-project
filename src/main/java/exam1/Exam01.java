@@ -35,7 +35,7 @@ public class Exam01 {
             return "Forty-Thirty";
         }else if (ScoreA==3&ScoreB<3){
             return "Forty-Love";
-        }else if (ScoreA==4&&ScoreB<4){
+        }else if (ScoreA==4&&ScoreB<3){
             return "Win for Player A";
         }else if(ScoreB==1&&ScoreA<1) {
             return "Love-Fifteen";
@@ -49,11 +49,17 @@ public class Exam01 {
             return "Fifteen-Forty";
         }else if (ScoreB==3&&ScoreA<3){
             return "Love-Forty";
-        }else if (ScoreB==4&&ScoreA<4){
+        }else if (ScoreB==4&&ScoreA<3){
             return "Win for Player B";
         }else if (ScoreA==ScoreB) {
             return "Deuce";
-        }else
+        }else if (ScoreA>=3&&ScoreB>=3){
+            if (ScoreA-ScoreB==1){
+                return "Advantage Player A";
+            }else if (ScoreB-ScoreA==1){
+                return "Advantage Player B";
+            }
+        }
             return null;
 
     }
