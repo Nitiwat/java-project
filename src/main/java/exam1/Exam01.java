@@ -58,6 +58,10 @@ public class Exam01 {
                 return "Advantage Player A";
             }else if (ScoreB-ScoreA==1){
                 return "Advantage Player B";
+            }else if (ScoreA-ScoreB>1){
+                return "Win for Player A";
+            }else if (ScoreB-ScoreA>1){
+                return "Win for Player B";
             }
         }
             return null;
