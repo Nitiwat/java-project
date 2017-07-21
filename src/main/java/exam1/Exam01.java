@@ -4,7 +4,16 @@ public class Exam01 {
     int ScoreA = 0;
     int ScoreB = 0;
 
+    public static void main(String[] args) {
+        Exam01 FinalTest=new Exam01("Player A","Player B");
+        FinalTest.playerAWin();
+        FinalTest.playerBWin();
+
+        System.out.println(FinalTest.getScore());
+    }
+
     public Exam01(String firstPerson, String secondPerson) {
+
     }
 
 
