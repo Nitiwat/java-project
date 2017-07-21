@@ -21,6 +21,8 @@ public class Exam01 {
             return "Love-All";
         }else if(ScoreA==1&&ScoreB<1){
             return "Fifteen-Love";
+        }else if (ScoreA==2&&ScoreB==1) {
+            return "Thirty-Fifteen";
         }else if(ScoreA==2&&ScoreB<2){
             return "Thirty-Love";
         }else if (ScoreA==3&ScoreB<3){
