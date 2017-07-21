@@ -17,7 +17,7 @@ public class Exam01 {
     }
 
     public String getScore() {
-        if (ScoreA==1){
+        if (ScoreA==1&&ScoreB<1){
             return "Fifteen-Love";
         }else if(ScoreA==2){
             return "Thirty-Love";
@@ -25,7 +25,7 @@ public class Exam01 {
             return "Forty-Love";
         }else if (ScoreA==4){
             return "Win for Player A";
-        }else if(ScoreB==1) {
+        }else if(ScoreB==1&&ScoreA<1) {
             return "Love-Fifteen";
         }else if (ScoreB==2){
             return "Love-Thirty";
@@ -33,6 +33,8 @@ public class Exam01 {
             return "Love-Forty";
         }else if (ScoreB==4){
             return "Win for Player B";
+        }else if (ScoreA==1&&ScoreB==1){
+            return "Fifteen-All";
         }
             return "Love-All";
 
