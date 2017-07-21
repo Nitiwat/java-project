@@ -27,7 +27,9 @@ public class Exam01 {
             return "Win for Player A";
         }else if(ScoreB==1) {
             return "Love-Fifteen";
-        }else
+        }else if (ScoreB==2){
+            return "Love-Thirty";
+        }
             return "Love-All";
 
     }
