@@ -7,13 +7,17 @@ public class Exam01 {
     public static void main(String[] args) {
         Exam01 FinalTest=new Exam01("Player A","Player B");
         FinalTest.playerAWin();
+        FinalTest.playerAWin();
+        FinalTest.playerBWin();
+        FinalTest.playerBWin();
+        FinalTest.playerBWin();
         FinalTest.playerBWin();
 
         System.out.println(FinalTest.getScore());
+        System.out.println(FinalTest.Result());
     }
 
     public Exam01(String firstPerson, String secondPerson) {
-
     }
 
 
@@ -28,13 +32,13 @@ public class Exam01 {
     public String getScore() {
         if (ScoreA==0&&ScoreB==0){
             return "Love-All";
-        }else if(ScoreA==1&&ScoreB<1){
+        }else if(ScoreA==1&&ScoreB==0){
             return "Fifteen-Love";
         }else if (ScoreA==1&&ScoreB==1){
             return "Fifteen-All";
         }else if (ScoreA==2&&ScoreB==1) {
             return "Thirty-Fifteen";
-        }else if(ScoreA==2&&ScoreB<2){
+        }else if(ScoreA==2&&ScoreB==0){
             return "Thirty-Love";
         }else  if (ScoreA==2&&ScoreB==2){
             return "Thirty-All";
@@ -42,7 +46,7 @@ public class Exam01 {
             return "Forty-Fifteen";
         }else if (ScoreA==3&&ScoreB==2){
             return "Forty-Thirty";
-        }else if (ScoreA==3&ScoreB<3){
+        }else if (ScoreA==3&ScoreB==0){
             return "Forty-Love";
         }else if (ScoreA==4&&ScoreB<3){
             return "Win for Player A";
@@ -50,13 +54,13 @@ public class Exam01 {
             return "Love-Fifteen";
         }else if (ScoreB==2&&ScoreA==1){
             return "Fifteen-Thirty";
-        }else if (ScoreB==2&&ScoreA<2){
+        }else if (ScoreB==2&&ScoreA==0){
             return "Love-Thirty";
-        }else if (ScoreB==3&&ScoreA==2){
-            return "Thirty-Forty";
         }else if (ScoreB==3&&ScoreA==1){
             return "Fifteen-Forty";
-        }else if (ScoreB==3&&ScoreA<3){
+        }else if (ScoreB==3&&ScoreA==2){
+            return "Thirty-Forty";
+        }else if (ScoreB==3&&ScoreA==0){
             return "Love-Forty";
         }else if (ScoreB==4&&ScoreA<3){
             return "Win for Player B";
@@ -74,7 +78,53 @@ public class Exam01 {
             }
         }
             return null;
+    }
 
+    public String Result(){
+        if (ScoreA>ScoreB&&ScoreA==4){
+            return "Win for Player A";
+        }else if (ScoreA<ScoreB&&ScoreB==4){
+            return "Win for Player B";
+        }else if(ScoreA==ScoreB&&ScoreA>=3){
+            return "Deuce";
+        }else if(ScoreA-ScoreB==1&&ScoreA>=3&&ScoreB>=3){
+            return "Advantage Player A";
+        }else if (ScoreB-ScoreA==1&&ScoreA>=3&&ScoreB>=3){
+            return "Advantage Player B";
+        }else if (ScoreA-ScoreB==2){
+            return "Win for Player A";
+        }else if (ScoreB-ScoreA==2){
+            return "Win for Player B";
+        }
+        return convertSocreAToString()+"-"+ convertScoreBToSting();
+    }
+
+
+    public String convertSocreAToString() {
+        switch (ScoreA) {
+            case 0:
+                return "Love";
+            case 1:
+                return "Fitteen";
+            case 2:
+                return "Thirty";
+            case 3:
+                return "Forty";
+        }
+        return null;
+    }
+    public String convertScoreBToSting(){
+        switch (ScoreB) {
+            case 0:
+                return "Love";
+            case 1:
+                return "Fitteen";
+            case 2:
+                return "Thirty";
+            case 3:
+                return "Forty";
+        }
+        return null;
     }
 
 }
