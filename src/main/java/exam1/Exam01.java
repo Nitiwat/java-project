@@ -31,6 +31,8 @@ public class Exam01 {
             return "Thirty-All";
         }else if (ScoreA==3&&ScoreB==1){
             return "Forty-Fifteen";
+        }else if (ScoreA==3&&ScoreB==2){
+            return "Forty-Thirty";
         }else if (ScoreA==3&ScoreB<3){
             return "Forty-Love";
         }else if (ScoreA==4&&ScoreB<4){
@@ -41,6 +43,8 @@ public class Exam01 {
             return "Fifteen-Thirty";
         }else if (ScoreB==2&&ScoreA<2){
             return "Love-Thirty";
+        }else if (ScoreB==3&&ScoreA==2){
+            return "Thirty-Forty";
         }else if (ScoreB==3&&ScoreA==1){
             return "Fifteen-Forty";
         }else if (ScoreB==3&&ScoreA<3){
