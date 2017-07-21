@@ -21,7 +21,7 @@ public class Exam01 {
             return "Fifteen-Love";
         }else if(ScoreA==2&&ScoreB<2){
             return "Thirty-Love";
-        }else if (ScoreA==3){
+        }else if (ScoreA==3&ScoreB<3){
             return "Forty-Love";
         }else if (ScoreA==4){
             return "Win for Player A";
@@ -29,7 +29,7 @@ public class Exam01 {
             return "Love-Fifteen";
         }else if (ScoreB==2&&ScoreA<2){
             return "Love-Thirty";
-        }else if (ScoreB==3){
+        }else if (ScoreB==3&&ScoreA<3){
             return "Love-Forty";
         }else if (ScoreB==4){
             return "Win for Player B";
@@ -37,6 +37,8 @@ public class Exam01 {
             return "Fifteen-All";
         }else if (ScoreA==2&&ScoreB==2){
             return "Thirty-All";
+        }else if (ScoreA==3&&ScoreB==3){
+            return "Deuce";
         }
             return "Love-All";
 
